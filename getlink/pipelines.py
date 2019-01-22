@@ -13,14 +13,14 @@ from scrapy.conf import settings
 import MySQLdb
 sys.setdefaultencoding('utf8')
 class GetlinkPipeline(object):
-    def process_item1(self, item, spider):
+    def process_item(self, item, spider):
         #logging.Error("runing here")
         today = time.strftime('%Y%m%d',time.localtime())
         fileName = today + 'movie.txt'
         with open(fileName,'a') as fp:
             fp.write(str(item['url'].encode("utf8")) + '\t' + str(item['title'].encode("utf8"))+ '\t' + (item['content'].encode("utf8"))+'\t' + str(item['type'].encode("utf8"))+'\t' + str(item['source'].encode("utf8"))+'\t' + str(item['saveTime'].encode("utf8"))+'\t' + str(item['pubTime'].encode("utf8"))+'\t' + str(item['site'].encode("utf8"))+'\t' + str(item['author'].encode("utf8"))+ '\n')
         return item
-    def process_item(self, item, spider):
+    def process_item1(self, item, spider):
         print "run process_item"
         # DBKWARGS=spider.settings.get('DBKWARGS')
         # con=MySQLdb.connect(**DBKWARGS)
