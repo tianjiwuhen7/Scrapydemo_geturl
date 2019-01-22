@@ -20,11 +20,11 @@ NEWSPIDER_MODULE = 'getlink.spiders'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
-MYSQL_HOSTS = '172.16.110.98'
-MYSQL_USER = 'zutnlp'
-MYSQL_PASSWORD = 'zutnlp'
+MYSQL_HOSTS = '172.16.xxx.xx'
+MYSQL_USER = 'xxxx'
+MYSQL_PASSWORD = 'xxxx'
 #MYSQL_PORT = settings.MYSQL_PORT
-MYSQL_DB='bazhuayu_gather'
+MYSQL_DB='xxxxxxx'
 CHARSET='utf8'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
